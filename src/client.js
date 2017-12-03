@@ -186,7 +186,7 @@ Client.prototype.connect = function(args) {
 		tls: !!args.tls,
 		password: args.password,
 		username: args.username || nick.replace(/[^a-zA-Z0-9]/g, ""),
-		realname: args.realname || "The Lounge User",
+		realname: args.realname || nick,
 		commands: args.commands,
 		ip: args.ip,
 		hostname: args.hostname,

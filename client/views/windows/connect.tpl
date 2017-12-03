@@ -14,11 +14,11 @@
 				{{/unless}}
 			</h1>
 		</div>
-		{{#if displayNetwork}}
 		<div>
 			<div class="col-sm-12">
 				<h2>Network settings</h2>
 			</div>
+		{{#if displayNetwork}}
 			<div class="col-sm-3">
 				<label for="connect:name">Name</label>
 			</div>
@@ -37,21 +37,24 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
+		{{/if}}
 			<div class="col-sm-3">
 				<label for="connect:password">Password</label>
 			</div>
 			<div class="col-sm-9">
 				<input class="input" id="connect:password" type="password" name="password" value="{{defaults.password}}">
 			</div>
+		{{#if displayNetwork}}
 			<div class="col-sm-9 col-sm-offset-3">
 				<label class="tls">
 					<input type="checkbox" name="tls" {{#if defaults.tls}}checked{{/if}} {{#if lockNetwork}}disabled{{/if}}>
 					Enable TLS/SSL
 				</label>
 			</div>
+		{{/if}}
 			<div class="clearfix"></div>
 		</div>
-		{{/if}}
+		
 		<div class="col-sm-12">
 			<h2>User preferences</h2>
 		</div>
